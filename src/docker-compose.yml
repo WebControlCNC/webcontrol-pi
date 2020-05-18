@@ -1,0 +1,13 @@
+version: '3.6'
+
+services:
+  custompios:
+    image: guysoft/custompios:devel
+    container_name: mydistro_builder
+    tty: true
+    restart: always
+    privileged: true
+    volumes:
+      - ./:/distro
+    devices:
+      - /dev/loop-control

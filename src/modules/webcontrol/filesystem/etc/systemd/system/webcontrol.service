@@ -1,0 +1,14 @@
+[Unit]
+Description=WebControl
+After=network.target
+
+[Service]
+ExecStart=/home/pi/webcontrol/webcontrol
+WorkingDirectory=/home/pi/webcontrol
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=pi
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,12 @@
+.DS_Store
+
+src/config.local
+src/custompios_path
+src/image/*.zip
+src/image-variants/*.zip
+**/key.json
+src/workspace-*
+src/workspace
+src/build.log
+src/vagrant/*.log
+src/vagrant/.vagrant
