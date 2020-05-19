@@ -3,7 +3,7 @@ WebControl Raspberry Pi image
 
 ## Downloading
 
-Download the current version [HERE](https://github.com/WebControlCNC/webcontrol-pi/releases/download/0.1.0/2020-02-13-webcontrolcnc-buster-lite-0.1.0.zip).
+Download the current version [HERE](https://github.com/WebControlCNC/webcontrol-pi/releases/download/0.1.1/2020-02-13-webcontrolcnc-buster-lite-0.1.1.zip).
 
 ## Usage
 
