@@ -18,14 +18,37 @@ unpack /filesystem/home/root /root root
 unpack /filesystem/boot /boot
 unpack /filesystem/etc /etc
 
-systemctl enable webcontrol.service
+# Download and unpack WebControl
+RELEASE_URL=https://github.com/WebControlCNC/WebControl/releases/download/v"${WEBCONTROL_VERSION}"/webcontrol-"${WEBCONTROL_VERSION}"-rpi-singledirectory.tar.gz
 
 cd /home/"${BASE_USER}"
 mkdir webcontrol
 cd webcontrol
-wget https://github.com/WebControlCNC/WebControl/releases/download/v0.9333/webcontrol-0.9333-rpi-singledirectory.tar.gz
-tar -zxvf webcontrol-0.9333-rpi-singledirectory.tar.gz
+wget -O webcontrol-release.tar.gz $RELEASE_URL
+tar -zxvf webcontrol-release.tar.gz
 
+# Start WebControl on boot
+systemctl enable webcontrol.service
+
+# Display helper text on boot
+sed -i 's@exit 0@@' /etc/rc.local
+cat <<'EOT' >> /etc/rc.local
+echo
+echo "------------------------------------------------------------"
+echo
+echo "You may now open a web browser on your local network and "
+echo "navigate to any of the following addresses to access "
+echo "WebControl:"
+echo
+for ip in $(hostname -I);
+do
+    echo "    http://$ip:5000"
+done
+echo "------------------------------------------------------------"
+echo
+EOT
+
+echo 'exit 0' >> /etc/rc.local
 
 # Unpack root at the end, so files are modified before
 unpack /filesystem/root /
