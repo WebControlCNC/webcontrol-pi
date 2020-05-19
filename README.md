@@ -1,11 +1,15 @@
 WebControl Raspberry Pi image
 =============================
 
+## Downloading
+
+Download the current version [HERE](https://github.com/WebControlCNC/webcontrol-pi/releases/download/0.1.0/2020-02-13-webcontrolcnc-buster-lite-0.1.0.zip).
+
 ## Usage
 
-1. Unzip the image and install it to an sd card like any other Raspberry Pi image
+1. Unzip the image and install it to an sd card [like any other Raspberry Pi image](https://www.raspberrypi.org/documentation/installation/installing-images/README.md)
 
-2. Configure your WiFi by editing octopi-wpa-supplicant.txt on the root of the flashed card when using it like a thumb drive
+2. Configure your WiFi by editing webcontrolcnc-wpa-supplicant.txt on the root of the flashed card when using it like a thumb drive
 
 3. Boot the Pi from the card
 
@@ -15,7 +19,7 @@ If your network isn't in range, the Pi will create its own, named "webcontrolcnc
 
 ## Building an image yourself
 
-The build uses Docker to create the image. Docker itself isn't used in the final image.
+The build uses Docker to create the image. **Docker itself isn't used in the final image.**
 
 Setup:
 
