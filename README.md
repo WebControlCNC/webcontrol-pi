@@ -13,7 +13,7 @@ Download the current version [HERE](https://github.com/WebControlCNC/webcontrol-
 
 3. Boot the Pi from the card
 
-If your network is in range, the Pi will connect to it, and WebControl will be available at http://<ip address>:5000. Look in your router's settings for the IP address.
+If your network is in range, the Pi will connect to it, and WebControl will be available at http://\<ip address\>:5000. Look in your router's settings for the IP address.
 
 If your network isn't in range, the Pi will create its own, named "webcontrolcnc", with the password "raspberry". WebControl will be available at http://192.168.50.1:5000/
 
