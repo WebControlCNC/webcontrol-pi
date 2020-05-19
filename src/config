@@ -1,4 +1,4 @@
 export DIST_NAME=WebControlCNC
-export DIST_VERSION=0.1.0
+export DIST_VERSION=0.1.1
 export MODULES="base(network,webcontrol,disable-services(auto-hotspot))"
 export WEBCONTROL_VERSION=0.9333

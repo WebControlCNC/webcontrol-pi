@@ -9,6 +9,7 @@ StandardOutput=inherit
 StandardError=inherit
 Restart=always
 User=pi
+KillMode=process
 
 [Install]
 WantedBy=multi-user.target
